@@ -1,20 +1,28 @@
 class Lecture01 {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        System.out.println("Hello from lecture 01");
 
         // SELF-CHECK PROBLEMS:
         // Note: you may need to put some of your answers inside comments
 
         // Put your answer for #1 here:
-        //
+        // Hello from lecture 01
         // Copy and paste the output from when you first cloned (downloaded) and ran
         // this program
         // (in other words, when you run this program, what does it print?
         // Copy that output into this file, right here, in a comment
 
         // Where in the textbook are the main topics for this question covered?
+        // The main topics for this question are covered in chapter 1.2
 
         // Put your answer for #2 here:
+        for (int i = 1; i <= 100; i++) {
+            System.out.print(i + " ");
+        }
+
+        // I chose a for loop because I experimented with the while loop, however, I would need to initialize a variable
+        // outside of it to get it started so I decided to keep everything modular within the for loop.
+        
         // Where in the textbook are the main topics for this question covered?
 
         // Put your answer for #3 here:
