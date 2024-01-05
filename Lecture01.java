@@ -4,6 +4,7 @@ class Lecture01 {
 
         // SELF-CHECK PROBLEMS:
         // Note: you may need to put some of your answers inside comments
+        System.out.println();
 
         // Put your answer for #1 here:
         // Hello from lecture 01
@@ -22,11 +23,20 @@ class Lecture01 {
 
         // I chose a for loop because I experimented with the while loop, however, I would need to initialize a variable
         // outside of it to get it started so I decided to keep everything modular within the for loop.
-        
+        System.out.println();
         // Where in the textbook are the main topics for this question covered?
+        // You can find information on this topic in chapter 2.3
 
         // Put your answer for #3 here:
+        for (int row = 0; row <= 5; row++) {
+            for (int column = 1; column <= row; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
         // Where in the textbook are the main topics for this question covered?
+        // You can find the main topics for this question in chapter 2.3
 
         // Put your answer for #4 here:
         // Where in the textbook are the main topics for this question covered?
