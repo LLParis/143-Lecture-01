@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Lecture01 {
     public static void main(String[] args) {
         System.out.println("Hello from lecture 01");
@@ -34,14 +36,43 @@ class Lecture01 {
             }
             System.out.println();
         }
+        System.out.println();
 
         // Where in the textbook are the main topics for this question covered?
         // You can find the main topics for this question in chapter 2.3
+        System.out.println("How many rows would you like to print?");
+        Scanner input = new Scanner(System.in);
+        int answer = input.nextInt();
+
 
         // Put your answer for #4 here:
+        for (int row = 0; row < answer; row++) {
+            for (int column = 0; column <= row; column++) {
+                System.out.print(column);
+            }
+            System.out.println();
+        }
+
         // Where in the textbook are the main topics for this question covered?
+        // Reading user input is in chapter 3.3 and nested for loops is in chapter 2.3.
+        System.out.println();
 
         // Put your answer for #5 here:
+        System.out.println("How many grades would you like to store?");
+        int storageSize = input.nextInt();
+
+        double sum = 0;
+
+        for (int i = 0; i < storageSize; i++) {
+            System.out.print("Next grade? ");
+            double gpa = input.nextDouble();
+            sum += gpa;
+            System.out.println();
+        }
+        double average = sum / storageSize;
+        System.out.println("The average of your grades is: " + average);
+
+
         // Where in the textbook are the main topics for this question covered?
 
         // Put your answer for #6 here:
