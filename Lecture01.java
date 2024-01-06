@@ -74,9 +74,17 @@ class Lecture01 {
 
 
         // Where in the textbook are the main topics for this question covered?
+        // Reading user input is in chapter 3.3, cumulative algorithms are in chapter 4.2
+        // for loops is from chapter 1.2, and concatenation is from chapter 2.2
 
         // Put your answer for #6 here:
+        Foods pear = new Foods("Pear", 102, 3.1);
+        Foods steak = new Foods("Steak", 278, 4.9);
+        System.out.println(steak.toString());
+
+
         // Where in the textbook are the main topics for this question covered?
+        // Constructors are in chapter 8.3, accessors and mutators are in chapter 8.2
         // NOTE: The definition of the Food class should go OUTSIDE the Lecture01
         // class. A good place to put this is at the end of the file.
         // NOTE 2: Make sure that you create a couple of Food objects here in main()
@@ -85,3 +93,32 @@ class Lecture01 {
 }
 
 // Placing the Food class below this line is a good place for it
+ class Foods {
+    private String name;
+    private int cal;
+    private double rating;
+
+    Scanner input = new Scanner(System.in);
+    public Foods(String foodName, int foodCal, double foodRating) {
+        this.name = foodName;
+        this.cal = foodCal;
+        this.setRating(foodRating);
+    }
+
+    public String get() {
+        return this.name;
+    }
+
+    public  void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRating(double rating) {
+        if (rating <= 0 || rating >= 5) {
+            System.out.println("Rating must be between 0 and 5 inclusive.");
+        } else {
+            this.rating = rating;
+        }
+
+    }
+}
