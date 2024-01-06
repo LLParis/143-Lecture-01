@@ -80,7 +80,14 @@ class Lecture01 {
         // Put your answer for #6 here:
         Foods pear = new Foods("Pear", 102, 3.1);
         Foods steak = new Foods("Steak", 278, 4.9);
-        System.out.println(steak.toString());
+        System.out.println(steak.getName());
+        steak.setName("Filet Mignon");
+        System.out.println(steak.getName());
+
+        System.out.println();
+
+        pear.print();
+        steak.print();
 
 
         // Where in the textbook are the main topics for this question covered?
@@ -96,7 +103,7 @@ class Lecture01 {
  class Foods {
     private String name;
     private int cal;
-    private double rating;
+    private double rating = -1;
 
     Scanner input = new Scanner(System.in);
     public Foods(String foodName, int foodCal, double foodRating) {
@@ -105,7 +112,7 @@ class Lecture01 {
         this.setRating(foodRating);
     }
 
-    public String get() {
+    public String getName() {
         return this.name;
     }
 
@@ -114,11 +121,17 @@ class Lecture01 {
     }
 
     public void setRating(double rating) {
-        if (rating <= 0 || rating >= 5) {
-            System.out.println("Rating must be between 0 and 5 inclusive.");
-        } else {
+        if (rating >= 0 && rating <= 5) {
             this.rating = rating;
+        } else {
+            System.out.println("Rating must be between 0 and 5 inclusive.");
+            this.rating = -1;
         }
+    }
 
+    public void print() {
+        System.out.println("Food: " + name);
+        System.out.println("Calories: " + cal);
+        System.out.println("Rating: " + rating);
     }
 }
